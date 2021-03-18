@@ -46,53 +46,53 @@ scene.add(pointLight)
 
 //light2
 const pointLight2 = new THREE.PointLight(0x52057b, 2)
-// pointLight.position.x = 2
-// pointLight.position.y = 3
-// pointLight.position.z = 4
+pointLight.position.x = 2
+pointLight.position.y = 3
+pointLight.position.z = 4
 pointLight2.position.set(-1.9,1,-1.6)
 pointLight2.intensity = 10
 
 scene.add(pointLight2)
 
-// const light1 = gui.addFolder('Light1') //génere un onglet light1 dans l'ui
-//
-// light1.add(pointLight2.position, 'y').min(-3).max(3).step(0.01) //ajoute un selecteur de valeur dans la scene pour la light et son placement en y
-// light1.add(pointLight2.position, 'x').min(-6).max(6).step(0.01) //ajoute un selecteur de valeur dans la scene pour la light et son placement en x
-// light1.add(pointLight2.position, 'z').min(-3).max(3).step(0.01) //ajoute un selecteur de valeur dans la scene pour la light et son placement en z
-// light1.add(pointLight2, 'intensity').min(0).max(10).step(0.01) //ajoute un selecteur de valeur dans la scene pour l'intensité de la light
+const light1 = gui.addFolder('Light1') //génere un onglet light1 dans l'ui
 
-// const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1) //génere la vision du spot light
-// scene.add(pointLightHelper)
+light1.add(pointLight2.position, 'y').min(-3).max(3).step(0.01) //ajoute un selecteur de valeur dans la scene pour la light et son placement en y
+light1.add(pointLight2.position, 'x').min(-6).max(6).step(0.01) //ajoute un selecteur de valeur dans la scene pour la light et son placement en x
+light1.add(pointLight2.position, 'z').min(-3).max(3).step(0.01) //ajoute un selecteur de valeur dans la scene pour la light et son placement en z
+light1.add(pointLight2, 'intensity').min(0).max(10).step(0.01) //ajoute un selecteur de valeur dans la scene pour l'intensité de la light
 
-//light3
+const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1) //génere la vision du spot light
+scene.add(pointLightHelper)
+
+light3
 
 const pointLight3 = new THREE.PointLight(0x9659, 2)
-// pointLight.position.x = 2
-// pointLight.position.y = 3
-// pointLight.position.z = 4
+pointLight.position.x = 2
+pointLight.position.y = 3
+pointLight.position.z = 4
 pointLight3.position.set(3.18,-3,-3.02)
 pointLight3.intensity = 1.7
 
 scene.add(pointLight3)
 
-// const light2 = gui.addFolder('Light2') //génere un onglet light2 dans l'ui
-//
-// light2.add(pointLight3.position, 'y').min(-3).max(3).step(0.01) //ajoute un selecteur de valeur dans la scene pour la light et son placement en y
-// light2.add(pointLight3.position, 'x').min(-6).max(6).step(0.01) //ajoute un selecteur de valeur dans la scene pour la light et son placement en x
-// light2.add(pointLight3.position, 'z').min(-3).max(3).step(0.01) //ajoute un selecteur de valeur dans la scene pour la light et son placement en z
-// light2.add(pointLight3, 'intensity').min(0).max(10).step(0.01) //ajoute un selecteur de valeur dans la scene pour l'intensité de la light
+const light2 = gui.addFolder('Light2') //génere un onglet light2 dans l'ui
 
-// const light2Color = {
-//     color: 0x892cdc
-// }
-//
-// light2.addColor(light2Color, 'color')
-//     .onChange(() => {
-//         pointLight3.color.set(light2Color.color)
-//     })
+light2.add(pointLight3.position, 'y').min(-3).max(3).step(0.01) //ajoute un selecteur de valeur dans la scene pour la light et son placement en y
+light2.add(pointLight3.position, 'x').min(-6).max(6).step(0.01) //ajoute un selecteur de valeur dans la scene pour la light et son placement en x
+light2.add(pointLight3.position, 'z').min(-3).max(3).step(0.01) //ajoute un selecteur de valeur dans la scene pour la light et son placement en z
+light2.add(pointLight3, 'intensity').min(0).max(10).step(0.01) //ajoute un selecteur de valeur dans la scene pour l'intensité de la light
 
-// const pointLightHelper2 = new THREE.PointLightHelper(pointLight3, 1) //génere la vision du spot light
-// scene.add(pointLightHelper2)
+const light2Color = {
+    color: 0x892cdc
+}
+
+light2.addColor(light2Color, 'color')
+    .onChange(() => {
+        pointLight3.color.set(light2Color.color)
+    })
+
+const pointLightHelper2 = new THREE.PointLightHelper(pointLight3, 1) //génere la vision du spot light
+scene.add(pointLightHelper2)
 
 /**
  * Sizes
